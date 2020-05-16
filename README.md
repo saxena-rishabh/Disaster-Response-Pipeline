@@ -138,7 +138,7 @@ The app can be accessed at http://0.0.0.0:3001/
 .
 ├── app
 │   ├── run.py------------------------# FLASK FILE THAT RUNS APP
-│   ├── DisasterResponse.db
+│   ├
 │   │   
 │   └── templates
 │       ├── go.html-------------------# CLASSIFICATION RESULT PAGE OF WEB APP
