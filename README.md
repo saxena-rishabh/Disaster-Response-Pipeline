@@ -11,9 +11,9 @@
   - [Data Cleaning](#cleaning)
   - [Training Classifier](#training)
   - [Starting the Web App](#starting)
-- [Conclusion](#conclusion)
 - [Files](#files)
-- [Software Requirements](#sw)
+- [Software Requirements](#sw)  
+- [Screenshots](#ss)
 - [Credits and Acknowledgements](#credits)
 
 ***
@@ -57,7 +57,7 @@ File _models/train_classifier.py_ contains machine learning pipeline that:
 - Splits the data into training and testing sets
 - Builds a text processing and machine learning pipeline
 - Trains and tunes a model using GridSearchCV
-- Outputs result on the test set
+- Evaluate model on the test set
 - Exports the final model as a pickle file
 
 <a id='flask'></a>
@@ -66,7 +66,8 @@ File _models/train_classifier.py_ contains machine learning pipeline that:
 
 <a id='eg'></a>
 
-Running [this command](#com) **from app directory** will start the web app where users can enter their query, i.e., a request message sent during a natural disaster, e.g. _"Please, we need tents and water. We are in Silo, Thank you!"_.
+Running [this command](#com) **from app directory** will start the web app where users can enter their query and get results.  
+The app will classify the text message into categories so that appropriate relief agency can be reached out for help.
 
 **_Screenshot 1_**
 
@@ -98,9 +99,6 @@ The first two arguments are input data and the third argument is the SQLite Data
 
 _DisasterResponse.db_ already exists in _data_ folder but the above command will still run and replace the file with same information. 
 
-**_Screenshot 3_**
-
-![process_data](img/process_data.jpg)
 
 <a id='training'></a>
 
@@ -116,25 +114,16 @@ This will use cleaned data to train the model, improve the model with grid searc
 
 _classifier.pkl_ already exists but the above command will still run and replace the file will same information.
 
-_**Screenshot 4**_
-
-![train_classifier_1](img/train_classifier_1.jpg)
-
-It took me around **4 minutes** to train the classifier with grid search.
 
 When the models is saved, it will look something like this.
 
 <a id='acc'></a>
 
-**_Screenshot 5_**
-
-![train_classifier_2.jpg](img/train_classifier_2.jpg)
-
 <a id='starting'></a>
 
 ### 3.3. Starting the web app
 
-Now that we have cleaned the data and trained our model. Now it's time to see the prediction in a user friendly way.
+Now that we have cleaned the data and trained our model. Now it's time to see the prediction in a web application.
 
 **Go the app directory** and run the following command:
 
@@ -144,31 +133,15 @@ Now that we have cleaned the data and trained our model. Now it's time to see th
 python run.py
 ```
 
-This will start the web app and will direct you to a URL where you can enter messages and get classification results for it.
-
-**_Screenshot 6_**
-
-![web_app](img/web_app.jpg)
+This will start the web app.  
+The app can be accessed at http://0.0.0.0:3001/
 
 <a id='conclusion'></a>
 
-## 4. Conclusion
-
-Some information about training data set as seen on the main page of the web app.
-
-**_Screenshot 7_**
-
-![genre](img/genre.jpg)
-
-**_Screenshot 8_**
-
-![dist](img/dist.jpg)
-
-As we can see the data is highly imbalanced. Though the accuracy metric is [high](#acc) (you will see the exact value after the model is trained by grid search, it is ~0.94), it has a poor value for recall (~0.6). So, take appropriate measures when using this model for decision-making process at a larger scale or in a production environment.
 
 <a id='files'></a>
 
-## 5. Files
+## 4. Files
 
 <pre>
 .
@@ -193,15 +166,21 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
 
 <a id='sw'></a>
 
-## 6. Software Requirements
+## 5. Software Requirements
 
-This project uses **Python 3.6.6** and the necessary libraries are mentioned in _requirements.txt_.
-The standard libraries which are not mentioned in _requirements.txt_ are _collections_, _json_, _operator_, _pickle_, _pprint_, _re_, _sys_, _time_ and _warnings_.
+This project uses **Python 3.6** and the necessary libraries are mentioned in _requirements.txt_.
+
+<a id='ss'></a>
+
+## 6. Screenshots
+
+
 
 <a id='credits'></a>
 
 ## 7. Credits and Acknowledgements
 
-Thanks <a href="https://www.udacity.com" target="_blank">Udacity</a> for letting me use their logo as favicon for this web app.
+Thanks to [Udacity](https://www.udacity.com/) and [Figure Eight](https://www.figure-eight.com) project for providing original dataset with [Multilingual Disaster Response Messages](https://www.figure-eight.com/dataset/combined-disaster-response-data).
 
-Another <a href="https://medium.com/udacity/three-awesome-projects-from-udacitys-data-scientist-program-609ff0949bed" target="_blank">blog post</a> was a great motivation to improve my documentation. This post discusses some of the cool projects from <a href="https://in.udacity.com/course/data-scientist-nanodegree--nd025" target="_blank">Data Scientist Nanodegree</a> students. This really shows how far we can go if we apply the concepts learned beyond the classroom content to build something that inspire others.
+
+
