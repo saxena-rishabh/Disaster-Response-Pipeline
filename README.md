@@ -69,15 +69,6 @@ File _models/train_classifier.py_ contains machine learning pipeline that:
 Running [this command](#com) **from app directory** will start the web app where users can enter their query and get results.  
 The app will classify the text message into categories so that appropriate relief agency can be reached out for help.
 
-**_Screenshot 1_**
-
-![master](img/master.jpg)
-
-What the app will do is that it will classify the text message into categories so that appropriate relief agency can be reached out for help.
-
-**_Screenshot 2_**
-
-![results](img/res.jpg)
 
 <a id='run'></a>
 
@@ -174,6 +165,15 @@ This project uses **Python 3.6** and the necessary libraries are mentioned in _r
 
 ## 6. Screenshots
 
+![Home Page](https://user-images.githubusercontent.com/40590709/82116592-95a22780-9788-11ea-8262-6eeee5e39087.png)  
+
+![Home Page Visualization 1](https://user-images.githubusercontent.com/40590709/82116611-bd918b00-9788-11ea-9d33-e186294e51fa.png)  
+
+![Home Page Visualization 2](https://user-images.githubusercontent.com/40590709/82116624-d601a580-9788-11ea-83a3-e26c3dd33f5b.png)  
+
+![Go Route](https://user-images.githubusercontent.com/40590709/82116695-51635700-9789-11ea-9f77-13ecdc0e39da.png)  
+
+![Go Route Visualization](https://user-images.githubusercontent.com/40590709/82116735-7ce64180-9789-11ea-847f-3847d53ce6ae.png)
 
 
 <a id='credits'></a>
